@@ -1,0 +1,127 @@
+	int buttonState1=0;
+	int buttonState2=0;
+	int buttonState3=0;
+int n1;
+	void setup()
+	{
+pinMode(13, OUTPUT);
+	  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+	  pinMode(4, OUTPUT);
+	  pinMode(3, OUTPUT);
+	  pinMode(2, OUTPUT);
+	  
+	  pinMode(5, INPUT);
+	  pinMode(10, INPUT);
+    pinMode(8, INPUT);
+}
+
+void loop()
+	{
+	  buttonState1=digitalRead(5);
+	  if(buttonState1 == HIGH)
+	  {
+	      digitalWrite(13, HIGH);
+	      digitalWrite(11, HIGH);
+	      digitalWrite(3, HIGH);
+	      delay(1000);
+	      digitalWrite(12, HIGH);
+	      digitalWrite(4, HIGH);
+	      digitalWrite(2, HIGH);
+	      delay(1000);
+	      digitalWrite(13, LOW);
+	      digitalWrite(11, LOW);
+      digitalWrite(3, LOW);
+      delay(1000);
+      digitalWrite(12, LOW);
+	      digitalWrite(4, LOW);
+	      digitalWrite(2, LOW);
+	    
+  }
+	  buttonState2=digitalRead(10);
+	  if(buttonState2 == HIGH)
+  {
+      digitalWrite(13, HIGH);
+      digitalWrite(11, HIGH);
+      delay(1000);
+      digitalWrite(12, HIGH);
+	      digitalWrite(4, HIGH);
+      delay(1000);
+57.	      digitalWrite(13, LOW);
+58.	      digitalWrite(11, LOW);
+59.	      delay(1000);
+60.	      digitalWrite(12, LOW);
+61.	      digitalWrite(4, LOW);
+62.	      delay(1000);
+63.	      digitalWrite(3, HIGH);
+64.	      digitalWrite(2, HIGH);
+65.	      delay(1000);
+66.	      digitalWrite(3, LOW);
+67.	      digitalWrite(2, LOW);
+68.	      
+69.	  }
+70.	  buttonState3=digitalRead(8);
+71.	  if(buttonState3==HIGH)
+72.	  {
+73.	    n1=random(1,5);
+74.	    if(n1 == 1)
+75.	    {
+76.	      digitalWrite(13, HIGH);
+77.	      digitalWrite(12, HIGH);
+78.	      digitalWrite(11, HIGH);
+79.	      delay(2000);
+80.	      digitalWrite(13, LOW);
+81.	      digitalWrite(12, LOW);
+82.	      digitalWrite(11, LOW);
+83.	      digitalWrite(4, HIGH);
+84.	      digitalWrite(3, HIGH);
+85.	      digitalWrite(2, HIGH);
+86.	      delay(1000);
+87.	      digitalWrite(4, LOW);
+88.	      digitalWrite(3, LOW);
+89.	      digitalWrite(2, LOW); 
+90.	    }
+91.	    else if(n1 == 2)
+92.	    {
+93.	      digitalWrite(13, HIGH);
+94.	      digitalWrite(12, HIGH);
+95.	      delay(1000);
+96.	      digitalWrite(13, LOW);
+97.	      digitalWrite(12, LOW);
+98.	      digitalWrite(11, HIGH);
+99.	      digitalWrite(4, HIGH);
+100.	      delay(1000);
+101.	      digitalWrite(11, LOW);
+102.	      digitalWrite(4, LOW);
+103.	      digitalWrite(3, HIGH);
+104.	      digitalWrite(2, HIGH);
+105.	      delay(1000);
+106.	      digitalWrite(3, LOW);
+107.	      digitalWrite(2, LOW);
+108.	    }
+109.	    else
+110.	    {
+111.	      digitalWrite(13, HIGH);
+112.	      delay(1000);
+113.	      digitalWrite(13, LOW);
+114.	      digitalWrite(12, HIGH);
+115.	      delay(1000);
+116.	      digitalWrite(12, LOW);
+117.	      digitalWrite(11, HIGH);
+118.	      delay(1000);
+119.	      digitalWrite(11, LOW);
+120.	      digitalWrite(4, HIGH);
+121.	      delay(1000);
+122.	      digitalWrite(4, LOW);
+123.	      digitalWrite(3, HIGH);
+124.	      delay(1000);
+125.	      digitalWrite(3, LOW);
+126.	      digitalWrite(2, HIGH);
+127.	      delay(1000);
+128.	      digitalWrite(2, LOW);
+129.	      
+130.	        
+131.	    }
+132.	  }
+133.	  
+134.	}
